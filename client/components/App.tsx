@@ -1,15 +1,15 @@
-import { useFruits } from '../hooks/useFruits.ts'
+import { createAuth0Client } from '@auth0/auth0-spa-js'
+import Header from './Header'
+import LoginButton from './Nav/LoginButton'
 
 function App() {
-  const { data } = useFruits()
-
   return (
     <>
-      <div className="app">
-        <h1 className="text-3xl font-bold underline">
-          Fullstack Boilerplate - with Fruits!
-        </h1>
-        <ul>{data && data.map((fruit) => <li key={fruit}>{fruit}</li>)}</ul>
+      <Header />
+      <br></br>
+      <div className="app flex flex-col items-center">
+        <h1 className="text-3xl font-bold">Welcome to Chorely</h1>
+        <br></br>
       </div>
     </>
   )
