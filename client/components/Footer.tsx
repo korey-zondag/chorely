@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start">
             <h3 className="mb-1 text-lg font-bold">Chorely</h3>
             <p className="text-center text-xs text-white/90 md:text-left">
-              Making chore management simple and organized for everyone.
+              Making chore management simple and organised for everyone.
             </p>
           </div>
 

@@ -16,7 +16,7 @@ export default function Header() {
             to="/chores"
             className="text-sm font-medium text-white hover:text-yellow-200"
           >
-            Chores
+            My Chores
           </Link>
           <Link
             to="/profile"

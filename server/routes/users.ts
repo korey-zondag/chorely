@@ -56,13 +56,13 @@ router.post(
     try {
       const auth0Id = req.auth?.sub
       const { userName } = req.body
-      const profilePicture = ''
+      let profilePicture = ''
       if (req.file) {
         profilePicture = `/images/${req.file.filename}`
       }
       const convert = {
         user_name: userName as string,
-        profile_pic: profilePicture,
+        profile_picture: profilePicture,
         auth0id: auth0Id as string,
       }
 

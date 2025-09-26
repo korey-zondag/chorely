@@ -11,15 +11,12 @@ const queryClient = new QueryClient()
 
 document.addEventListener('DOMContentLoaded', () => {
   createRoot(document.getElementById('app') as HTMLElement).render(
-    /**
-     * TODO: replace domain, clientId, and audience
-     */
     <Auth0Provider
-      domain=""
-      clientId=""
+      domain="korey.au.auth0.com"
+      clientId="L8FOYydWwC04loFyQyUqAgWTcDblJUA8"
       authorizationParams={{
         redirect_uri: window.location.origin,
-        audience: '',
+        audience: 'https://chorely/api',
       }}
     >
       <QueryClientProvider client={queryClient}>
