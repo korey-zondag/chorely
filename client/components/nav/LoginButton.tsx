@@ -1,6 +1,6 @@
 import { Button } from '../UI/Button.tsx'
-import { IfAuthenticated, IfNotAuthenticated } from './Authentication.tsx'
 import { useAuth0 } from '@auth0/auth0-react'
+import { IfAuthenticated, IfNotAuthenticated } from '../Authorisation.tsx'
 
 function LoginButton() {
   const { user, loginWithRedirect, logout } = useAuth0()
