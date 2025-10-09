@@ -1,6 +1,5 @@
-/**
- * @param {import('knex').Knex} knex
- */
+@param {import('knex').Knex} knex
+
 export async function up(knex) {
   return knex.schema.createTable('chores', (table) => {
     table.increments('id')

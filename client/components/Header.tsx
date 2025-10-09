@@ -16,13 +16,19 @@ export default function Header() {
             to="/chores"
             className="text-sm font-medium text-white hover:text-yellow-200"
           >
-            My Chores
+            Chores
+          </Link>
+          <Link
+            to="/recipes"
+            className="text-sm font-medium text-white hover:text-yellow-200"
+          >
+            Recipes
           </Link>
           <Link
             to="/profile"
             className="text-sm font-medium text-white hover:text-yellow-200"
           >
-            My Profile
+            Profile
           </Link>
         </div>
         <div className="flex justify-end">

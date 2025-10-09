@@ -28,7 +28,13 @@ export default function Footer() {
                 to="/chores"
                 className="block text-xs text-white/90 transition-colors hover:text-white"
               >
-                My Chores
+                Chores
+              </Link>
+              <Link
+                to="/recipes"
+                className="block text-xs text-white/90 transition-colors hover:text-white"
+              >
+                Recipes
               </Link>
               <Link
                 to="/profile"
