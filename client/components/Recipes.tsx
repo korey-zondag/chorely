@@ -4,25 +4,62 @@ import { useState } from 'react'
 
 function RecipesPage() {
   const [recipes, setRecipes] = useState([
-    { id: 1, name: 'Grilled Cheese' },
-    { id: 2, name: 'Mi Goreng Noodles' },
+    {
+      id: 1,
+      recipe_name: 'Grilled Cheese',
+      description: 'Cheese between two slices of bread, grilled.',
+      cook_time: '30 minutes',
+      ingredients: 'Two slices of bread, butter, cheese',
+      instructions:
+        'Butter both sides of two slices of bread. Then slice some cheese and put that in between the bread. Cook in the oven for 20-25 minutes on medium heat.',
+      added_by: 'Korey',
+    },
   ])
   const [newRecipe, setNewRecipe] = useState('')
   const [editingId, setEditingId] = useState<number | null>(null)
   const [editingName, setEditingName] = useState('')
+  const [editingDescription, setEditingDescription] = useState('')
+  const [editingCookTime, setEditingCookTime] = useState('')
+  const [editingIngredients, setEditingIngredients] = useState('')
+  const [editingInstructions, setEditingInstructions] = useState('')
+  const [editingAddedBy, setEditingAddedBy] = useState('')
 
   // Adding recipes
   const handleAdd = () => {
     if (newRecipe.trim()) {
-      setRecipes([...recipes, { id: Date.now(), name: newRecipe }])
+      setRecipes([
+        ...recipes,
+        {
+          id: Date.now(),
+          recipe_name: '',
+          description: '',
+          cook_time: '',
+          ingredients: '',
+          instructions: '',
+          added_by: '',
+        },
+      ])
       setNewRecipe('')
     }
   }
 
   // Start editing recipes
-  const handleEdit = (id: number, name: string) => {
+  const handleEdit = (
+    id: number,
+    recipe_name: string,
+    description: string,
+    cook_time: string,
+    ingredients: string,
+    instructions: string,
+    added_by: string,
+  ) => {
     setEditingId(id)
-    setEditingName(name)
+    setEditingName(recipe_name)
+    setEditingDescription(description)
+    setEditingCookTime(cook_time)
+    setEditingIngredients(ingredients)
+    setEditingInstructions(instructions)
+    setEditingAddedBy(added_by)
   }
 
   // Save edit
@@ -88,11 +125,11 @@ function RecipesPage() {
                 </>
               ) : (
                 <>
-                  <span>{recipe.name}</span>
+                  <span>{recipe.recipe_name}</span>
                   <div>
                     <button
                       className="mr-2 rounded bg-yellow-500 px-2 py-1 text-white"
-                      onClick={() => handleEdit(recipe.id, recipe.name)}
+                      onClick={() => handleEdit(recipe.id, recipe.recipe_name)}
                     >
                       Edit
                     </button>
