@@ -7,7 +7,7 @@ function RecipesPage() {
     {
       id: 1,
       recipe_name: 'Grilled Cheese',
-      description: 'Cheese between two slices of bread, grilled.',
+      recipe_description: 'Cheese between two slices of bread, grilled.',
       cook_time: '30 minutes',
       ingredients: 'Two slices of bread, butter, cheese',
       instructions:
@@ -32,7 +32,7 @@ function RecipesPage() {
         {
           id: Date.now(),
           recipe_name: '',
-          description: '',
+          recipe_description: '',
           cook_time: '',
           ingredients: '',
           instructions: '',
@@ -47,7 +47,7 @@ function RecipesPage() {
   const handleEdit = (
     id: number,
     recipe_name: string,
-    description: string,
+    recipe_description: string,
     cook_time: string,
     ingredients: string,
     instructions: string,
@@ -55,7 +55,7 @@ function RecipesPage() {
   ) => {
     setEditingId(id)
     setEditingName(recipe_name)
-    setEditingDescription(description)
+    setEditingDescription(recipe_description)
     setEditingCookTime(cook_time)
     setEditingIngredients(ingredients)
     setEditingInstructions(instructions)
